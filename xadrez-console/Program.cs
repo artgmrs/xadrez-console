@@ -9,23 +9,20 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            //Tabuleiro tab = new Tabuleiro(8, 8);
+            Tabuleiro tab = new Tabuleiro(8, 8);
 
-            //try
-            //{
-            //    tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            //    tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            //    tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 4));
-            //    Tela.ImprimirTabuleiro(tab);
-            //}
-            //catch (TabuleiroException e)
-            //{
-            //    Console.WriteLine("Ocorreu um erro: " + e.Message);
-            //}
-            PosicaoXadrez pos = new PosicaoXadrez('a', 8);
-            Console.WriteLine(pos);
-
-            Console.WriteLine(pos.ToPosicao());
+            try
+            {
+                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+                tab.ColocarPeca(new Torre(tab, Cor.Branca), new Posicao(1, 3));
+                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 4));
+                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 5));
+                Tela.ImprimirTabuleiro(tab);
+            }
+            catch (TabuleiroException e)
+            {
+                Console.WriteLine("Ocorreu um erro: " + e.Message);
+            }
         }
     }
 }
