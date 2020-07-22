@@ -34,7 +34,7 @@ namespace tabuleiro
 
         public void ColocarPeca(Peca p, Posicao pos)
         {
-            if (ExistePeca(pos))
+            if (ExistePeca(pos) && p.Cor == Peca(pos.Linha, pos.Coluna).Cor)
             {
                 throw new TabuleiroException("Já existe uma peça nessa posição.");
             }
