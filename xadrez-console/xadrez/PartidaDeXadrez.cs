@@ -69,7 +69,7 @@ namespace xadrez
             }
             Tab.ColocarPeca(p, origem);
 
-            //jogada especial - roque pequeno
+            //#jogadaEspecial - roque pequeno
             if (p is Rei && destino.Coluna == origem.Coluna + 2)
             {
                 Posicao origemT = new Posicao(origem.Linha, origem.Coluna + 3);
@@ -79,7 +79,7 @@ namespace xadrez
                 Tab.ColocarPeca(T, origemT);
             }
 
-            //jogada especial - roque grande
+            //#jogadaEspecial - roque grande
             if (p is Rei && destino.Coluna == origem.Coluna - 2)
             {
                 Posicao origemT = new Posicao(origem.Linha, origem.Coluna - 4);
